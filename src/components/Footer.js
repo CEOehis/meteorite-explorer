@@ -8,7 +8,7 @@ export default () => (
     built with{' '}
     <span role="img" aria-label="love">
       ❤️
-    </span>
+    </span>{' '}
     by Celestine
   </Footer>
 );
