@@ -3,7 +3,7 @@ import { Input } from 'antd';
 
 const Search = Input.Search;
 
-export default () => (
+export default props => (
   <Search
     placeholder="Enter search terms"
     style={{
@@ -14,6 +14,6 @@ export default () => (
       marginRight: 'auto',
     }}
     size="large"
-    onSearch={value => console.log(value)}
+    {...props}
   />
 );

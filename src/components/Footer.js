@@ -5,10 +5,13 @@ const { Footer } = Layout;
 
 export default () => (
   <Footer style={{ textAlign: 'center' }}>
-    built with{' '}
-    <span role="img" aria-label="love">
-      ❤️
-    </span>{' '}
-    by Celestine
+    View{' '}
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href="https://github.com/CEOehis/meteorite-explorer"
+    >
+      page source
+    </a>
   </Footer>
 );
