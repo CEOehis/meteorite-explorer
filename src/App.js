@@ -14,6 +14,7 @@ class App extends Component {
     data: [],
     loading: false,
     error: '',
+    search: '',
   };
 
   async componentDidMount() {
@@ -37,6 +38,9 @@ class App extends Component {
   }
 
   onSearchChange = event => {
+    this.setState({
+      search: event.target.value,
+    });
     if (event.target.value === '') {
       return window.history.pushState({}, null, '/');
     }
@@ -44,7 +48,7 @@ class App extends Component {
   };
 
   onSearch = async () => {
-    const name = encodeURIComponent(`%${window.location.search.slice(3)}%`);
+    const name = encodeURIComponent(`%${this.state.search}%`);
     this.setState({
       loading: true,
     });

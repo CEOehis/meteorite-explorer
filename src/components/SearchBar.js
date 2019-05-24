@@ -6,6 +6,7 @@ const Search = Input.Search;
 export default props => (
   <Search
     placeholder="Enter search terms"
+    enterButton="Search"
     style={{
       width: 300,
       marginBottom: 30,
