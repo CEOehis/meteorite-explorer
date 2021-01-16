@@ -3,7 +3,7 @@ commands:
   print_pipeline_id:
     description: "Prints the pipeline id to the console"
     steps:
-      - run: echo pipeline_id: ${$CIRCLE_WORKFLOW_ID}
+      - run: echo "pipeline_id: ${$CIRCLE_WORKFLOW_ID}"
 jobs:
   save_hello_world_output:
     docker:
