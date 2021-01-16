@@ -12,6 +12,11 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo "world"
+  print_project_owner:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo $PROJECT_OWNER
 workflows:
   node-tests:
     jobs:
