@@ -1,4 +1,9 @@
 version: 2.1
+commands:
+  print_pipeline_id:
+    description: "Prints the pipeline id to the console"
+    steps:
+      - run: echo pipeline_id: ${$CIRCLE_WORKFLOW_ID}
 jobs:
   save_hello_world_output:
     docker:
@@ -13,6 +18,7 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
+      - print_pipeline_id
       - attach_workspace:
           at: /home/circleci/project
       - run: cat /home/circleci/project/output.txt
